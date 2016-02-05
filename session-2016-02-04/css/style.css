@@ -1,0 +1,127 @@
+/* ------ General Styles -----*/
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+.align-children{
+  font-size: 0;
+}
+
+.align-children > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: medium;
+}
+
+/* ------ My Styles -----*/
+
+.major-section{
+   width: 100%;
+   padding: 20px;
+   outline: 1px solid rgba(255,0,0,.25);
+}
+
+h1 {
+  color: #c0392b;
+  font-size: 30px;
+  background: #fff;
+}
+
+select {
+  width: 100%;
+}
+
+.major-section input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 14px 8px;
+}
+
+.major-section input[type="text"]:hover{
+  background: #f1c40f;
+}
+
+.major-section input[type="text"]:focus {
+  background: #39d179;
+  outline: none;
+}
+
+.checker-toggle{
+  position: relative;
+  display: block;
+  width: 150px;
+}
+
+.checker-toggle input{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; 
+  left: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.checker-toggle input.checker:checked ~ h5{
+  color: #e67e22;
+  left: 100%;
+}
+
+.checker-toggle .cover{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(100,100,100, .82);
+}
+
+.checker-toggle h5{
+  position: relative;
+  z-index: 1;
+  color: #2c3e50;
+  font-size: 30px;
+  padding: 10px;
+  left: 0;
+  transition: all .2s;
+}
+
+
+
+/* -------------------*/
+/* Tablet Size Styles*/
+/* -------------------*/
+@media (min-width: 600px){
+  h1{
+    font-size: 36px;
+  }
+
+  .major-section{
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 1328px){
+  h1 {
+    font-size: 48px;
+  }
+  .major-section {
+    width: 33.3333%;
+  }
+
+  .show-box{
+    position: relative;
+  }
+  .
+}
+
+
+
+
