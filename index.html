@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <title>Review Directory</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <div id="container">
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2>Review Sessions</h2>
+        <h2>TIY Front-End Review Sessions</h2>
       </div>
-
-      <table class="table">
+ 
+      <table class="table table-striped">
         <thead>
-          <tr>
+          <tr class="info">
             <th>Date</th>
             <th>Description</th>
             <th>Github Link</th>
@@ -26,24 +27,53 @@
         <tbody>
           <tr>
             <td>Feb-02-2016</td>
-            <td>Multi-Column Layout</td>
             <td>
-              <a href="https://github.com/t3patterson/tiy-review-sessions/tree/master/session-2016-02-02">
+              <div class="topics">
+                <h4>Topics</h4>
+                <ul>
+                  <li>Analyzing layouts</li>
+                  <li>Building a multi-column layout</li>
+                  <li>Nesting columns within columns</li>
+                </ul>
+              </div>
+              <hr/>
+              <div class="resources">
+                <h5>Links &amp; Resources</h5>
+                <ul>
+                  <li><a target="_blank" href="http://lorempixel.com/">lorempixel.com (stock images)  </a></li>
+                  <li><a target="_blank" href="https://raw.githubusercontent.com/t3patterson/tiy-review-sessions/master/session-2016-02-02/onion-html-layout-div-boxes.png">'Boxing' a layout</a></li>
+                </ul>
+              </div>
+            </td>
+            <td>
+              <a target="_blank" href="https://github.com/t3patterson/tiy-review-sessions/tree/master/session-2016-02-02">
                 <i class="fa fa-github fa-2x"></i>
               </a>
             </td>
             <td>
-              &nbsp;–––
+                <a target="_blank" href="./session-2016-02-02/onion-layout/index.html">
+                  <i class="fa fa-laptop fa-2x"></i>
+                </a>
             </td>
           </tr>
           <tr>
             <td>Feb-04-2016</td>
-            <td>
-              <ul>
-                <li>Multi Column Layout Pt 2</li>
-                <li>Pseudo-classes: <code>:hover</code>, <code>:focus</code></li>
-                <li>Modify element's style on separate element's <code>:checked</code></li>
-              </ul>
+            <td class="topics-and-resources">
+              <div class="topics">
+                <h4>Topics</h4>
+                <ul>
+                  <li>Multi Column <em>responsive</em> layouts</li>
+                  <li>Pseudo-classes: <code>:hover</code>, <code>:focus</code></li>
+                  <li>Modify element's style on separate element's <code>:checked</code></li>
+                </ul>
+              </div>
+              <hr/>
+              <div class="resources">
+                <h5>Links &amp; Resources</h5>
+                <ul>
+                  <li><a target="_blank" href="https://flatuicolors.com/">Flat UI Colors</a></li>
+                </ul>
+              </div>
             </td>
             <td>
               <a target="_blank" href="https://github.com/t3patterson/tiy-review-sessions/tree/master/session-2016-02-04">

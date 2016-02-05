@@ -1,6 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+
 #container{
   padding: 20px;
-  max-width: 720px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -19,4 +23,12 @@ a {
 
 a:hover{
   color: #9b59b6;
+}
+
+.resources li{
+  font-size: 12px;
+}
+
+.resources li{
+  list-style: circle;
 }
