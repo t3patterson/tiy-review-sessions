@@ -102,8 +102,10 @@ select {
     font-size: 36px;
   }
 
+
   .major-section{
     width: 50%;
+    margin: 0 auto;
   }
 
 }

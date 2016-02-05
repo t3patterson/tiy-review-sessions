@@ -1,0 +1,22 @@
+#container{
+  padding: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: #3498db;
+  transition: all .05s;
+}
+
+a:hover{
+  color: #9b59b6;
+}

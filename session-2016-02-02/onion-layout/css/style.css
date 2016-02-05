@@ -1,0 +1,84 @@
+/*-----------------------*/
+/* general styles */
+/*-----------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+.align-children {
+  font-size: 0;
+}
+
+.align-children > * {
+   font-size: medium;
+   display: inline-block;
+   vertical-align: top;
+}
+
+
+
+/*-----------------------*/
+/* header section */
+/*-----------------------*/
+
+.header{ 
+  border: #333 solid 4px;
+}
+
+.header h1 {
+  color: green;
+  background: lightgray;
+  text-align: center;
+  margin: 0;
+}
+
+.header h5{
+  background: lightgreen;
+  font-size: 21px;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*-----------------------*/
+/* main-content section */
+/*-----------------------*/
+
+.main-content{
+  border: cadetblue 6px solid;
+}
+
+.left-side{ 
+  background: salmon;
+  width: 66.6666%;
+  font-size: 0;   
+}
+
+.left-side h1 {
+  background: seagreen;
+}
+
+.right-side{
+  background: lightsteelblue;
+  width: 33.33333%;
+}
+
+.article-container{
+  width: 50%;
+}
+
+.img-container{
+  width: 50%;
+}
+
+.img-container img{
+  width: 100%;
+  display: block;
+}
+
+
+
+
+
+
