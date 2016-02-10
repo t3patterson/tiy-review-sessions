@@ -12,6 +12,17 @@
   margin-top: 0;
 }
 
+hr {
+  margin: 5px 0px;
+  border-color: #aaa;
+}
+
+hr.mini{
+  border-color: #ccc;
+  width: 25%;
+  margin-left: -15px;
+}
+
 ul {
   padding-left: 20px;
 }
