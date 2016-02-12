@@ -12,25 +12,25 @@
 //
 //------------------------------------------------------------------
 
-var countInstancesOfX = function(sentence){
+// var countInstancesOfX = function(sentence){
 
-  var characterArray = sentence.split('');  //
+//   var characterArray = sentence.split('');  //
 
-  var  xCount = 0;
+//   var  xCount = 0;
 
-  for (var i = 0 ; i < characterArray.length ; i = i + 1){
+//   for (var i = 0 ; i < characterArray.length ; i = i + 1){
       
-      if ( characterArray[i] === 'x'  ){
+//       if ( characterArray[i] === 'x'  ){
           
-          xCount = xCount + 1;
+//           xCount = xCount + 1;
 
-      }
-  }
+//       }
+//   }
 
-  return xCount
-}
+//   return xCount
+// }
 
-console.log( countInstancesOfX("xavier's favorite dinosaur is the t-rex") );
+// console.log( countInstancesOfX("xavier's favorite dinosaur is the t-rex") );
 
 /// TASK 1 - REFACTORED
 //    - make the function count the instance of any character
