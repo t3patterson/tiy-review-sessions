@@ -1,3 +1,8 @@
+// TASK 5 
+//   Iterate over an object and print each property & value to the console
+//
+//
+
 var someObject = {
   name: 'Arjun',
   children: ['Sally', 'Byron'],
@@ -6,6 +11,7 @@ var someObject = {
   netWorth: 43000
 }
 
+//  ( var «property» in «object» ){...
 for ( var key in someObject ) {
   console.log(key)
   console.log( someObject[key] )
