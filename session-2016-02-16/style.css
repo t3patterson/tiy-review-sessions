@@ -1,18 +1,18 @@
-.square {
-  width: 40px;
-  height: 40px;
-  background: indianred;
-  transition: all.2s;
-}
+    .square {
+      width: 40px;
+      height: 40px;
+      background: indianred;
+      transition: all .2s;
+    }
 
-button{
-  background: ;
-  line-height: 40px;
-  font-size: 18px;
-  cursor: pointer;
-  background: #89C4F4;
-  outline: 0px;
-}
-  button:hover{
-    background: #BE90D4
-  }
+    button{
+      background: ;
+      line-height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      background: #89C4F4;
+      outline: 0px;
+    }
+      button:hover{
+        background: #BE90D4
+      }
