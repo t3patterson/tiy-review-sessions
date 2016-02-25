@@ -25,8 +25,7 @@ $.getJSON("https://randomuser.me/api/?results=10&nat=us").then( function( dataFr
   // 5) Manipulate HTML from inside the callback function for the `then` method
     
   var cellphoneNo = dataFromApi.results[0].user.cell
-  $document.querySelector('.container').innerHTML = "<h2> User cell is: " + cellNo + "</h2>"
-
+  document.querySelector('#container-2').innerHTML = "<h2> User cell is: " + cellphoneNo + "</h2>"
 
 })
 

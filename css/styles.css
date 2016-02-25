@@ -43,3 +43,13 @@ a:hover{
 .resources li{
   list-style: circle;
 }
+
+tbody tr{
+  opacity: .5;
+}
+
+tbody tr:nth-last-of-type(1){
+  opacity: 1;
+}
+
+

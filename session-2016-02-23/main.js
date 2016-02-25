@@ -33,6 +33,7 @@ var someData = {
     ]
 }
 
+// ======================================
 // PART 1 -- Make a function that takes an object with an array-of-objects 
 //           and returns an array of only those objects that meet a criteria
 
@@ -65,7 +66,7 @@ var getMembersList = function (dataObj){
 var membersArray = getMembersList(someData)
 
 
-
+// ======================================
 // PART 2 --- Convert array-of-objects to an html string
 
   // INPUT: membersArray
