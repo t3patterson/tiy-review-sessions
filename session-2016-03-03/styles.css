@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+}
+
+#container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: #F5AB35;
+}
+
+.align-children {
+    font-size: 0;
+  }
+
+  .align-children > *{
+    display: inline-block;
+    font-size: medium;
+    width: 50%;
+    padding: 18px;
+    vertical-align: top;
+  }
+
+.profile-container h5 {
+   background: #3A539B;
+   color: #fff;
+   font-weight: 200;
+   padding: 15px;
+   text-transform: capitalize;
+   margin: 3px 0;
+ }
+ 
+ .profile-container img {
+   position: relative;
+   border-radius: 50%;
+   display: block;
+   top: 10px;
+ }
+
+ .profile-container h6 {
+   text-align: right;
+   text-transform: capitalize;
+   margin: 0px 0;
+ }
+ 
+ .profile-container p {
+   font-weight: 700;
+   text-align: right;
+   margin-top: -6px;
+   color: #999;
+ }
+ 
+ .profile-container small {
+   font-weight: 400;
+   text-transform: capitalize;
+ }
+
+ #footer-container {
+  background: #2C3E50;
+  margin-top: 100px;
+  border-top: 6px solid #86E2D5;
+  text-align: right;
+  color: #fff;
+  padding: 10px;
+ }
+
+ #footer-container button{
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    border: 0px;
+ } 
+  #footer-container button:hover {
+    background: #ddd;
+    cursor: pointer;
+    color: #2C3E50;
+ }  
+  
