@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Power to the People</title>
+  <title>so, so many </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -11,7 +11,7 @@
   <header>
     <h1 class="title">&hearts; So many dates 4 you! &hearts;</h1>
   </header>
-
+  
   <nav>
     
   </nav>
@@ -20,6 +20,41 @@
     
   </div>
 
+  <footer>
+    <ul>
+      <li>Terms & Conditions</li>
+      <li>Safety Tips</li>
+      <li>Success Stories</li>
+      <li>Privacy</li>
+    </ul>
+  </footer>
+
+  <script type="text/template" id="single-view_templ" >
+
+    <div class="single-profile">
+       <div class="main">
+         <img src="http://flathash.com/<%= bbMod.get('bioguide_id')%>" />
+         <h4> &hearts; <%= bbMod.get('district') %>  </h4>
+       </div>
+    <div class="details">
+         <h3><%= bbMod.get('first_name') %>  </h3>
+
+         <h6>Age:</h6>
+         <p> <%= bbMod.get('birthday') %> </p>
+         <h6>Address:</h6>
+         <p>  <%= bbMod.get('office') %>  </p>
+         <h6>Originally From:</h6>
+         <p>  <%= bbMod.get('state') %>  </p>
+         <h6>Member Since:</h6>
+         <p>  <%= bbMod.get('term_start') %>  </p>
+         <h6>For a good time:</h6>
+         <p>  <%= bbMod.get('oc_email') %>  </p>
+         <h6>[R]elaxed or [D]emanding:</h6>
+         <p> <%= bbMod.get('party') %>  </p>
+      </div>
+    </div>
+
+  </script>
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>

@@ -32,13 +32,37 @@ var ProfileModel = Backbone.Model.extend({
 var ProfileCollection = Backbone.Collection.extend({
   model: ProfileModel,
 
-  url: function(){
-    return this.model.prototype.url.call(this)
+  url: function(masParams){
+    return this.model.prototype.url.call(this, masParams)
   },
 
   parse: function(d){
     console.log('parsing collection 4 u')
     return d.results
+  }
+})
+
+var ProfileSingleView = Backbone.View.extend({
+  el: '#container',
+
+  _buildTemplate: function(aModel){
+    var htmlStr = document.querySelector('#single-view_templ').innerHTML
+    console.log(htmlStr)
+    var compiled = _.template(htmlStr)({bbMod: aModel})
+    console.log(compiled)
+    return compiled
+  },
+
+  initialize: function(m){
+    this.model = m
+    this.model.on('change', this.render.bind(this) )
+  },
+
+  render: function(){
+    console.log('rendering:;;;;')
+    console.log(this.el)
+    this.el.innerHTML = this._buildTemplate(this.model)
+    return this
   }
 })
 
@@ -68,7 +92,9 @@ var ProfileMultiView = Backbone.View.extend({
       var m = collModels[i]
       htmlStr += '<div class="profile-card" id='+m.get('bioguide_id')+'>' 
       htmlStr +=   '<img src="http://flathash.com/'+ m.get('bioguide_id') +'">'
-      htmlStr +=   "<h5>"+ m.get('first_name') + "</h5>"
+      htmlStr +=   "<h5>"+ m.get('first_name') + '</br>'
+      htmlStr +=   '<small>' + m.get('state_name')+ '</small>'
+      htmlStr +=   '</h5>'
       htmlStr += '</div>'
     }
     console.log(htmlStr)
@@ -81,58 +107,76 @@ var ProfileMultiView = Backbone.View.extend({
   }
 })
 
+var NavView = Backbone.View.extend({
+  el: 'nav',
+
+  events: {
+    'keypress input' : 'handleStateSearch',
+  },
+
+  handleStateSearch: function(evt){
+    console.log(evt)
+    if (evt.keyCode === 13 ) {
+      var searchQ = evt.target.value 
+      if( searchQ.length > 2 ) {
+        alert("too long!! please give state short-name only");
+        return
+      }
+
+      evt.target.value = ''
+      window.location.hash = "state/" + searchQ
+
+    }
+  },
+
+  _buildTemplate: function(){
+    var htmlStr = ''
+    htmlStr += '<input type="text" placeholder="Search by state! (ex: FL)">'
+    return htmlStr
+  },
+
+  render: function(){
+    this.el.innerHTML = this._buildTemplate()
+    return this
+  }
+})
+
 var AppRouter = Backbone.Router.extend({
   routes: {
     "profile/:id" : "showSingle",
+    "state/:st" : "showProfilesByState",
     "*default" : "showProfiles"  
   },
 
   showProfiles: function(){
     console.log('home page routing!')
     
-    var collectionInstance = new ProfileCollection();
-    var hottiesView = new ProfileMultiView(collectionInstance)
+    var datersCollection = new ProfileCollection();
+    var manyDatersView = new ProfileMultiView(datersCollection)
  
-    collectionInstance.fetch()
+    datersCollection.fetch()
   },
 
   showSingle: function(bioId){
     console.log('single')
-    var singleHotty = new ProfileModel()
-    
-    singleHotty.url("bioguide_id="+bioId)
-    
-    singleHotty.fetch().then(function(r){
-      var bigStr  = '<div class="single-profile">'
-          bigStr +=   '<div class="main">'
-          bigStr +=     '<img src="http://flathash.com/'+ singleHotty.get('bioguide_id') +'"/>'
-          bigStr +=     '<h4> &hearts; '+ singleHotty.get('district') + '</h4>'
-          bigStr +=   '</div>'
-          bigStr +=   '<div class="details">'
-          bigStr +=     '<h3>'+singleHotty.get('first_name') + '</h3>'
-
-          bigStr +=     '<h6>Age:</h6>'
-          bigStr +=     '<p>' +singleHotty.get('birthday')+ '</p>'
-          bigStr +=     '<h6>Address:</h6>'
-          bigStr +=     '<p>' + singleHotty.get('office') + '</p>'
-          bigStr +=     '<h6>Originally From:</h6>'
-          bigStr +=     '<p>' + singleHotty.get('state') + '</p>'
-          bigStr +=     '<h6>Member Since:</h6>'
-          bigStr +=     '<p>' + singleHotty.get('term_start') + '</p>'
-          bigStr +=     '<h6>For a good time:</h6>'
-          bigStr +=     '<p>  ' + singleHotty.get('oc_email') + '</p>'
-          bigStr +=     '<h6>[R]elaxed or [D]emanding:</h6>'
-          bigStr +=     '<p>'+ singleHotty.get('party') + '</p>'
-          bigStr +=   '</ul>'
-          bigStr +=  '</div>'
-
-      container_el.innerHTML= bigStr
-    })
+    var singleDater = new ProfileModel()
+    var singleDaterView = new ProfileSingleView(singleDater)
+    singleDater.url("bioguide_id="+bioId)
+    singleDater.fetch()
   },
 
+  showProfilesByState: function(stateName){
+    console.log(stateName)
+    var datersCollection = new ProfileCollection()
+    var manyDatersView = new ProfileMultiView(datersCollection)
+    datersCollection.url( 'state='+stateName.toUpperCase() )
+    datersCollection.fetch()
+  },
 
   initialize: function(){
     console.log('router on!')
+    var navBar = new NavView()
+    navBar.render()
     Backbone.history.start()
   }
 })
