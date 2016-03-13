@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+}
+
+header, #container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header{
+  text-align: right;
+  background: #D64541;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+h1.title{
+  border-bottom: #fff 1px solid;
+  color: rgba(255,192,203,1);
+  font-family: 'Zapf Chancery', cursive;
+}
+
+.profile-card{
+  display: inline-block;
+  margin: 1.5%;
+  width: 47%;
+  border: 4px solid rgba(150, 40, 27, 1.0);
+  padding: 5% 10%;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 0;
+  border-radius:  40px 200px 40px 200px;
+  cursor: pointer;
+}
+
+
+.profile-card:hover{
+  background: rgba(255,192,203,.3);
+}
+
+.profile-card:nth-of-type(even){
+  border-radius: 200px 40px 200px 40px;
+
+}
+
+.profile-card > * {
+  display: inline-block;
+  font-size: medium;
+  vertical-align: top;
+  width: 50%;
+}
+
+
+.profile-card img{
+  border-radius: 50%;
+  border: 4px solid pink;
+}
+.profile-card h5{
+  font-size: 21px;
+  vertical-align: top;
+  text-align: center;
+  border: 2px solid rgba(150, 40, 27, .5);
+  color: rgba(150, 40, 27, 1.0);
+  padding: 5px;
+}
+
+.single-profile {
+  padding: 25px;
+  border: 10px solid rgba(150, 40, 27, 1.0);
+}
+
+.single-profile .main img {
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.single-profile .main h4 {
+  display: block;
+  margin: 0 auto;
+  color: rgba(215,152,193,1);
+  text-align: center;
+
+}
+
+.single-profile .details  h3 {
+  text-align: center;
+  color: rgba(150, 40, 27, 1.0);
+  background: rgba(255,192,203,1);
+
+}
+
+.single-profile .details h6 {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  color: rgba(150, 40, 27, 1.0);
+
+}
+.single-profile .details p {
+  padding-left: 10px;
+  color: rgba(215,152,193,1);
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 700px){
+
+    .single-profile {
+      border-radius: 20px;
+      font-size: 0;
+    }
+
+    .single-profile > * {
+      display: inline-block;
+      width: 50%;
+      font-size: medium;
+      vertical-align: top;
+    }
+
+    .single-profile .main img {
+      display: block;
+      width: 95%;
+    }
+
+}
