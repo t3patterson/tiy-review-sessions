@@ -1,3 +1,4 @@
+ls
 logs
 *.log
 pids
@@ -9,9 +10,7 @@ coverage
 .lock-wscript
 build/Release
 node_modules
-dist/app.js
 dist/app.js.map
-dist/style.css
 dist/esdoc
 build/
 bower_components
